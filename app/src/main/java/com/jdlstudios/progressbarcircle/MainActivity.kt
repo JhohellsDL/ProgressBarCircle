@@ -28,13 +28,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun animatedProgressBar() {
-        val progressAnimator = ObjectAnimator.ofInt(binding.progressBar, "progress", 0 ,60)
+        val progressAnimator = ObjectAnimator.ofInt(binding.progressBar, "progress", 0, 100)
         progressAnimator.duration = 1000
         progressAnimator.start()
     }
 
     private fun animatedText() {
-        val valueAnimator = ValueAnimator.ofInt(0, 60)
+        val valueAnimator = ValueAnimator.ofInt(0, 100)
         valueAnimator.duration = 1000
         valueAnimator.addUpdateListener {
             val animatedValue = it.animatedValue as Int
